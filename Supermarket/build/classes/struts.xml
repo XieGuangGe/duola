@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+<!--  开发模式-->
+    <constant name="struts.devMode" value="true" />
+    
+
+	<package name="default" namespace="/" extends="struts-default">
+	<!-- 登录 -->
+		<action name="login" class="com.pb.action.Loginaction" method="login">
+			<result name="success" type="dispatcher">frame.jsp</result>
+			<result name="error" type="redirect">login.jsp</result>
+		
+		</action>
+		<!-- 查询所有用户信息 -->
+	<action name="UserStudent" class="com.pb.action.UserStudentaction" method="login">
+			<result name="success" type="dispatcher">userView.jsp</result>
+		
+		</action> 
+		<!-- 查询所有账单 -->
+		<action name="BillStudent" class="com.pb.action.Billstudentaction" method="login">
+			<result name="success" type="dispatcher">billView.jsp</result>
+		
+		</action>
+		<!--  根据id得到记录-->
+		<action name="Billid" class="com.pb.action.Billidaction" method="login">
+			<result name="success" type="dispatcher">billAM.jsp</result>
+		
+		</action>
+	<!-- 得到修改的界面和数据 -->
+		<action name="SerachUpdatebill" class="com.pb.action.SerachUpdatebillaction" method="login">
+			<result name="success" type="dispatcher">billAMLast.jsp</result>
+		
+		</action>
+		<!-- 提交修改后的信息 -->
+		<action name="UpateServlets" class="com.pb.action.UpateServletaction" method="login">
+			<result name="success" type="redirectAction">BillStudent</result>
+		<result name="error" type="redirectAction">SerachUpdatebill</result>
+		</action>
+		<!-- 删除 -->
+			<action name="DetectServletbill" class="com.pb.action.BillDeteteaction" method="login">
+			<result name="success" type="redirect">BillStudent</result>
+		<result name="error" type="redirect">SerachUpdatebill</result>
+		</action>
+		<!--  查询所有供应商-->
+		
+		<action name="Transitionbill" class="com.pb.action.Transitionaction" method="login">
+			<result name="success" type="redirect">billAdd.jsp</result>
+		
+		</action>
+		
+		 <action name="BillAdd" class="com.pb.action.BillAddaction" method="login">
+			<result name="success" type="redirect">BillStudent</result>
+			<result name="error" type="redirectAction">Transitionbill</result>
+		
+		</action> 
+		
+		
+		
+		
+	</package>
+
+</struts>
+

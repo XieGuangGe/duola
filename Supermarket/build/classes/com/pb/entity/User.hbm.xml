@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-11-6 15:53:08 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.pb.entity.User" table="USERS">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="seqhilo">
+        <param name="sequence">seq_user</param>
+         <param name="max_lo">100</param>
+    </generator>
+
+        </id>
+        <property name="username" type="java.lang.String">
+            <column name="USERNAME" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="PASSWORD" />
+        </property>
+        <property name="sex" type="int">
+            <column name="SEX" />
+        </property>
+        <property name="age" type="int">
+            <column name="AGE" />
+        </property>
+        <property name="mobile" type="java.lang.String">
+            <column name="MOBILE" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="common" type="int">
+            <column name="COMMON" />
+        </property>
+        <property name="supers" type="int">
+            <column name="SUPERS" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-11-6 14:43:35 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.pb.entity.Supplier" table="SUPPLIER">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="seqhilo">
+        <param name="sequence">SEQ_ORDER</param>
+         <param name="max_lo">100</param>
+    </generator>
+        </id>
+        <property name="pro_name" type="java.lang.String">
+            <column name="PRO_NAME" />
+        </property>
+        <property name="pro_desc" type="java.lang.String">
+            <column name="PRO_DESC" />
+        </property>
+        <property name="pro_contact" type="java.lang.String">
+            <column name="PRO_CONTACT" />
+        </property>
+        <property name="pro_phone" type="java.lang.String">
+            <column name="PRO_PHONE" />
+        </property>
+        <property name="pro_address" type="java.lang.String">
+            <column name="PRO_ADDRESS" />
+        </property>
+        <property name="pro_fax" type="java.lang.String">
+            <column name="PRO_FAX" />
+        </property>
+    </class>
+</hibernate-mapping>

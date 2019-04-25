@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-11-6 14:43:35 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.pb.entity.Bill" table="BILL">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="seqhilo">
+        <param name="sequence">SEQ_ORDER</param>
+         <param name="max_lo">100</param>
+    </generator>
+        </id>
+        <property name="product_name" type="java.lang.String">
+            <column name="PRODUCT_NAME" />
+        </property>
+        <property name="product_desc" type="java.lang.String">
+            <column name="PRODUCT_DESC" />
+        </property>
+        <property name="bill_time" type="java.lang.String">
+            <column name="BILL_TIME" />
+        </property>
+        <property name="peovider_id" type="int">
+            <column name="PEOVIDER_ID" />
+        </property>
+        <property name="ispay" type="int">
+            <column name="ISPAY" />
+        </property>
+        <property name="bill_money" type="int">
+            <column name="BILL_MONEY" />
+        </property>
+        <property name="unit" type="java.lang.String">
+            <column name="UNIT" />
+        </property>
+        <property name="counts" type="int">
+            <column name="COUNTS" />
+        </property>
+    </class>
+</hibernate-mapping>
